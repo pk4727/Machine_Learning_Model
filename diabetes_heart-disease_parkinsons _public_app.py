@@ -2,20 +2,28 @@ import pickle
 import streamlit as st
 from streamlit_option_menu import option_menu
 
-# loading the saved model
-diabetes_model = pickle.load(open("Diabetes_prediction_trained_model.sav",'rb'))
 
-heart_disease_model = pickle.load(open("heart_disease_prediction_trained_model.sav",'rb'))
+# loading the saved models
 
-parkinsons_model = pickle.load(open("parkinsons_model.sav",'rb'))
+diabetes_model = pickle.load(open('Diabetes_prediction_trained_model.sav', 'rb'))
+
+heart_disease_model = pickle.load(open('heart_disease_prediction_trained_model.sav', 'rb'))
+
+parkinsons_model = pickle.load(open('parkinsons_model_p.sav', 'rb'))
 
 
-# creating sidebar for multiple system
+
+# sidebar for navigation
 with st.sidebar:
-    selected = option_menu('Multiple_Diseases_Predection_System',
-                           ['Diabetes_Predection by ML','Heart_Diseases_Predection by ML','Parkinsons_Predection by ML'],
-                           icons=['activity','heart','person'],      # from bootstrape icon by copy the name from site
-                           default_index = 0)
+    
+    selected = option_menu('Multiple Disease Prediction System',
+                          
+                          ['Diabetes_Predection by ML',
+                           'Heart_Diseases_Predection by ML',
+                           'Parkinsons_Predection by ML'],
+                          icons=['activity','heart','person'],
+                          default_index=0)
+    
     
 
 # ----------------------------------------------------------------------------------------------------------------------------------
