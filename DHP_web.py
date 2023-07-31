@@ -175,7 +175,7 @@ if selected == 'Parkinsons_Predection by ML':
     # for prediction
     parkinsons_result = ''
     # create a button for prediction
-    if st.button('parkinsons Test Result'):
+    if st.button('Parkinsons Test Result'):
         parkinsons_prediction = parkinsons_model.predict([[ MDVP_Fo, MDVP_Fhi, MDVP_Flo, MDVP_Jitter1, MDVP_Jitter2, MDVP_RAP, MDVP_PPQ, Jitter_DDP, MDVP_Shimmer1, MDVP_Shimmer2, Shimmer_APQ3, Shimmer_APQ5, MDVP_APQ, Shimmer_DDA, NHR, HNR, RPDE, DFA, spread1, spread2, D2, PPE ]])
         #  phon_R01_S01_1 = 1 ,     phon_R01_S07_1 = 0      (checking)
         if (parkinsons_prediction[0] == 1):
