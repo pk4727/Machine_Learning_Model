@@ -20,7 +20,7 @@ The result is a dehazed image and a corresponding transmission map, which can be
 
 ### Clone the repository:
 
-**git clone https://github.com/your-username/image-dehazing.git**
+**git clone https://github.com/pk4727/Machine_Learning_Model/tree/main/Dehazing-model%20(image%2C%20video%2C%20live_video_by_webCam)*
 **cd image-dehazing**
 
 
